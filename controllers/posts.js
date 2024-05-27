@@ -8,7 +8,9 @@ const index = (req, res) => {
             let html = '<ul>';
             posts.forEach(post => {
                 html += `<li>
-                <h2>${post.title}</h2>
+                    <h2>${post.title}</h2>
+                    <p>${post.content}</p>
+                    <img width="250" src=${`/${post.image}`} />
                 </li>`
             })
             html += '</ul>';
@@ -22,8 +24,6 @@ const index = (req, res) => {
         }
     })
 }
-
-const add = (req, res) => { }
 
 module.exports = {
     index,

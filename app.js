@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
-const postsControllers = require("./controllers/posts.js")
+const postsControllers = require("./controllers/posts.js");
+
+app.use(express.static('./public'));
 
 app.get('/', (req, res) => {
     res.send(`<h1>Benvenuto nel mio blog!</h1>`);

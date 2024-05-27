@@ -9,7 +9,6 @@ app.get('/', (req, res) => {
 })
 
 app.get('/posts', postsControllers.index);
-app.post('/posts', postsControllers.add);
 
 app.listen(3000, () => {
     console.log('Server attivo sulla porta http://localhost:3000.');
